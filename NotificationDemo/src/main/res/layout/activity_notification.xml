@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NotificationActivity">
+
+    <Button
+        android:id="@+id/bt_com"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="151dp"
+        android:layout_marginTop="203dp"
+        android:text="普通"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bt_fold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="39dp"
+        android:text="折叠"
+        app:layout_constraintStart_toStartOf="@+id/bt_com"
+        app:layout_constraintTop_toBottomOf="@+id/bt_com" />
+
+    <Button
+        android:id="@+id/bt_hang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="悬挂"
+        app:layout_constraintStart_toStartOf="@+id/bt_fold"
+        app:layout_constraintTop_toBottomOf="@+id/bt_fold" />
+
+    <RadioGroup
+        android:id="@+id/rb_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="434dp"
+        tools:ignore="MissingConstraints">
+
+        <RadioButton
+            android:id="@+id/rb_public"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="36dp"
+            android:text="public"
+            app:layout_constraintBaseline_toBaselineOf="@+id/rb_protected"
+            app:layout_constraintEnd_toStartOf="@+id/rb_protected" />
+
+        <RadioButton
+            android:id="@+id/rb_protected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="57dp"
+            android:text="protected"
+            app:layout_constraintStart_toStartOf="@+id/bt_hang"
+            app:layout_constraintTop_toBottomOf="@+id/bt_hang" />
+
+        <RadioButton
+            android:id="@+id/rb_private"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="33dp"
+            android:text="private"
+            app:layout_constraintBaseline_toBaselineOf="@+id/rb_protected"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </RadioGroup>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,1 @@
+include ':RecyclerView', ':lib', ':NotificationDemo', ':Permissiondemo', ':TextInputLayoutDemo', ':TabLayoutDemo', ':DrawerLayoutDemo', ':CoordinatorLayoutDemo'
